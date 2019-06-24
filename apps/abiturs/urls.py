@@ -8,8 +8,8 @@ from rest_framework import routers
 from .views import AbiturViewSet
 
 router = routers.DefaultRouter()
-router.register(r'^abiturs',AbiturViewSet)
+router.register(r'abiturs',AbiturViewSet)
 
 urlpatterns = [
-    path('',include(router.urls))
+    url(r'^',include(router.urls))
 ]
