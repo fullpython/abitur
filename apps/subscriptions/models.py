@@ -3,6 +3,7 @@ from django.db.models import F
 
 
 class Subscription(models.Model):
+    likes = models.IntegerField(default=0)
     abitur = models.ForeignKey(
         'abiturs.Abitur',
         on_delete=models.CASCADE,
