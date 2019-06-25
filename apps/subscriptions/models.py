@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.db.models import F
 
 
 class Subscription(models.Model):
@@ -13,4 +13,10 @@ class Subscription(models.Model):
     )
     date_assigned = models.DateField()
 
-    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields = ['abitur','faculty'],
+                name='abitur_unique'
+            )
+        ]

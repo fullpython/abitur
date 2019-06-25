@@ -14,7 +14,6 @@ class UniversityViewSet(viewsets.ModelViewSet):
     queryset = University.objects.all()
     serializer_class = UniversitySerializer
     
-    
     def get_serializer_class(self):
         if self.action == 'retrieve':
             serializer_class = UniversityDetailSerializer
