@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/',include('apps.abiturs.urls'), name='abiturs'),
     url(r'^api/',include('apps.universities.urls'), name='universities'),
-    # path('api/',include('apps.subscriptions.urls'), name='subscriptions'),
+    url(r'^api/',include('apps.subscriptions.urls'), name='subscriptions'),
 ]
