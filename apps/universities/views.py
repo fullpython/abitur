@@ -20,7 +20,7 @@ class UniversityViewSet(viewsets.ModelViewSet):
         else:
             serializer_class = UniversitySerializer
         return serializer_class
-
+    
 class FacultyViewSet(viewsets.ModelViewSet):
     queryset = Faculty.objects.all()
     serializer_class = FacultySerializer
